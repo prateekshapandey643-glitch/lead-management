@@ -4,11 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw
-
-# 🔥 FORCE spring boot build properly
-RUN ./mvnw clean package spring-boot:repackage -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "java -jar target/*.jar"]
+CMD ["java","-jar","target/lead-management-0.0.1-SNAPSHOT.jar"]
