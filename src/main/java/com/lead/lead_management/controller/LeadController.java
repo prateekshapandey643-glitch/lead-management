@@ -14,9 +14,15 @@ public class LeadController {
     @Autowired
     private LeadService service;
 
+    // ✅ TEST endpoint (browser ke liye)
+    @GetMapping
+    public String test() {
+        return "Lead Management API is working 🚀";
+    }
+
+    // ✅ CREATE lead (Postman / curl ke liye)
     @PostMapping
     public Lead createLead(@RequestBody LeadRequest request) {
-
         return service.saveLead(request);
     }
 }
