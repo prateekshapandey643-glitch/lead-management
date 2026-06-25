@@ -78,6 +78,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                
+            <!-- 👇 THIS IS WHERE YOU ADD IT -->
+            <configuration>
+                <mainClass>com.lead.lead_management.LeadManagementApplication</mainClass>
+            </configuration>
             </plugin>
 
         </plugins>
