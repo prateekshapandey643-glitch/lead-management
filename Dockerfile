@@ -5,7 +5,9 @@ WORKDIR /app
 COPY . .
 
 RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+
+# 🔥 FORCE spring boot build properly
+RUN ./mvnw clean package spring-boot:repackage -DskipTests
 
 EXPOSE 8080
 
