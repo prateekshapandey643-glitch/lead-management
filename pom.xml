@@ -70,18 +70,17 @@
         </dependency>
 
     </dependencies>
-<build>
-    <plugins>
 
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-                <mainClass>com.lead.lead_management.LeadManagementApplication</mainClass>
-            </configuration>
-        </plugin>
+    <build>
+        <plugins>
 
-    </plugins>
-</build>
+            <!-- Spring Boot Plugin (AUTO DETECT MAIN CLASS) -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
